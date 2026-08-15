@@ -366,7 +366,7 @@ Rather than incorporating 3D geometric information (which VLMs rarely encounter 
       <div id="results-carousel" class="carousel results-carousel">
        <div class="item">
         <!-- TODO: Replace with your research result images -->
-        <img src="static/images/Figure1.png" alt="First research result visualization" loading="lazy"/>
+        <img src="static/images/Figure1.png" alt="First research result visualization" loading="lazy" style="width: auto; max-width: none; height: auto;"/>
         <!-- TODO: Replace with description of this result -->
         <h2 class="subtitle has-text-centered">
           Qualitative comparison of Traj-VLN with general-purpose multi-model large language models (MLLMs). It's demonstrated that the popular MLLMs can hardly draw a reasonable trajectory to interact with the 3D environments. With our fine-tuning supervised by pixel-space trajectories, the VLMs achieve the interactions in 2D image plane by learning to autoregressively generate a sequence of pixel coordinates. The prompt used for the general-purpose MLLMs is "please draw a trajectory on the image to follow the instruction: get out of the door and turn left, go through the way between the sofas, pass the fireplace to reach the door on the right."
@@ -374,28 +374,28 @@ Rather than incorporating 3D geometric information (which VLMs rarely encounter 
       </div>
       <div class="item">
         <!-- Your image here -->
-        <img src="static/images/Figure2.png" alt="Second research result visualization" loading="lazy"/>
+        <img src="static/images/Figure2.png" alt="Second research result visualization" loading="lazy" style="width: auto; max-width: none; height: auto;"/>
         <h2 class="subtitle has-text-centered">
           The framework of Traj-VLN. At each time step, Traj-VLN takes as input a language instruction, the current observation, and a set of uniformly sampled historical observations. Based on Qwen3-VL, Traj-VLN fully fine-tunes the LLM and the projection layer while keeping the vision encoder frozen. In the first conversation stage , Traj-VLN is fine-tuned to output either turning actions or "STOP". If Traj-VLN outputs "↓" in the first stage, it enters the second stage and receive an down-looking observation. During the second stage, Traj-VLN is fine-tuned to autoregressively generate a sequence of pixel coordinates on the down-looking image. Supervised by the pixel-space trajectories, Traj-VLN achieves interactions with the image regions by delineating a trajectory from near to far.
         </h2>
       </div>
       <div class="item">
         <!-- Your image here -->
-        <img src="static/images/Figure3.png" alt="Third research result visualization" loading="lazy"/>
+        <img src="static/images/Figure3.png" alt="Third research result visualization" loading="lazy" style="width: auto; max-width: none; height: auto;"/>
         <h2 class="subtitle has-text-centered">
          An example of conversations during a VLN task. The placeholders "<instruction$>", "<image>", "<down-looking image>", and "<history>" are dynamically replaced with corresponding textual and visual content to form the input sequence, which is subsequently tokenized according to the VLM's vocabulary.
        </h2>
      </div>
      <div class="item">
       <!-- Your image here -->
-      <img src="static/images/Figure4.png" alt="Fourth research result visualization" loading="lazy"/>
+      <img src="static/images/Figure4.png" alt="Fourth research result visualization" loading="lazy" style="width: auto; max-width: none; height: auto;"/>
       <h2 class="subtitle has-text-centered">
         Comparison of pixel-goal (InternVLA-N1) and Traj-VLN under varying numbers of execution steps per trajectory prediction. The horizontal axis denotes the number of waypoints along a trajectory to be executed. "Final pixel as pixel-goal" refers to treating the final waypoint of the predicted trajectory as the pixel goal for evaluating Traj-VLN using the same evaluation protocol as pixel-goal. The results are obtained with the same models as those reported in Table II.
       </h2>
     </div>
       <div class="item">
         <!-- Your image here -->
-        <img src="static/images/Figure5.png" alt="Third research result visualization" loading="lazy"/>
+        <img src="static/images/Figure5.png" alt="Third research result visualization" loading="lazy" style="width: auto; max-width: none; height: auto;"/>
         <h2 class="subtitle has-text-centered">
          Qualitative results of Traj-VLN in simulation and real-world environments. The Unitree-G1 robot is equipped with two cameras: a downward camera on the head for down-looking views and a forward camera positioned at the neck.
        </h2>
