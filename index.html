@@ -247,7 +247,7 @@
               <span class="author-block">
                 <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">Changfei Fu</a></sup>,</span>
                 <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Guangcheng Chen</a><sup>*</sup>,</span>
+                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Guangcheng Chen</a></sup>,</span>
                   <span class="author-block">
                     <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Aoxiang Gu</a></sup>,</span>
                   <span class="author-block">
@@ -347,7 +347,9 @@
         <div class="content has-text-justified">
           <!-- TODO: Replace with your paper abstract -->
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+            Leveraging vision-language models (VLMs) to achieve generalization has become a prevailing paradigm in Vision-and-Language Navigation in Continuous Environments (VLN-CE). A VLN task can be decomposed into a sequence of 3D spatial interactions with the environment, as described by instructions such as \enquote{walk to the end of the sofa and turn left.} However, such spatial interactions, which involve moving into the image along the direction of depth sensing are puzzling for VLMs, since they are predominantly trained on conversations including only RGB images. Prior work has tackled this issue by fine-tuning VLMs with a pixel-goal as the supervision signal. But how can VLMs accurately infer a target pixel if they lack explicit understanding of the 3D scene layout? 
+
+Rather than incorporating 3D geometric information (which VLMs rarely encounter during pre-training) or simply supervising the VLM using a single pixel-goal, we propose an alternative approach: fine-tuning VLMs to learn navigation interactions directly in 2D pixel space via autoregressive trajectory generation. Given a linguistic instruction and historical observations, our model sequentially predicts a series of pixel coordinates, drawing a trajectory from the bottom center of the current observation-a unique projection of the 3D trajectory. This autoregressive generation of pixel trajectory effectively serves as a chain-of-thought mechanism for more accurate pixel-goal prediction and enables the VLM to plan executable interactions in cluttered environments without explicit 3D reasoning. While prior work has proved that pixel-goal supervision outperforms learning of discrete actions, our experiments further verify that the pixel-trajectory supervision significantly enhances VLN-CE performance. Moreover, we demonstrate that our flagship model achieves substantial improvement over state-of-the-art methods that use similar scale of training data.
           </p>
         </div>
       </div>
