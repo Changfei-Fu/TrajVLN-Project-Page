@@ -259,9 +259,6 @@ body {
 }
 
 .results-carousel .item {
-  display: flex;
-  flex-direction: column;    /* 让图片和文字竖向排列 */
-  align-items: center;       /* 水平居中 */
   margin: 1rem;
   overflow: hidden;
   padding: 1.5rem;
@@ -281,6 +278,7 @@ body {
 
 .results-carousel .item img,
 .results-carousel video { 
+  display: inline-block;
   margin: 0;
   border-radius: var(--border-radius);
   max-width: 100%;
