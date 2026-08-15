@@ -259,6 +259,8 @@ body {
 }
 
 .results-carousel .item {
+  display: flex;
+  align-items: center; 
   margin: 1rem;
   overflow: hidden;
   padding: 1.5rem;
@@ -275,10 +277,6 @@ body {
   box-shadow: var(--shadow-lg);
 }
 
-.results-carousel .item {
-  text-align: center;
-  /* ...其他样式不变 */
-}
 
 .results-carousel .item img,
 .results-carousel video {
