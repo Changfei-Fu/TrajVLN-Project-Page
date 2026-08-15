@@ -282,6 +282,7 @@ body {
 
 .results-carousel .item img,
 .results-carousel video {
+  display: inline-block; 
   margin: 0;
   border-radius: var(--border-radius);
   max-width: 100%;
